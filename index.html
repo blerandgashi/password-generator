@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🔐 Password Generator</h1>
+    
+    <div class="setting">
+      <label for="length">Password Length: <span class="length-value" id="length-value">12</span></label>
+      <input type="range" id="length" min="8" max="20" value="12">
+      <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #7f8c8d;">
+        <span>8</span>
+        <span>20</span>
+      </div>
+    </div>
+
+    <div class="setting">
+      <label>Include:</label>
+      <div class="checkbox-group">
+        <div class="checkbox-item">
+          <input type="checkbox" id="uppercase" checked>
+          <label for="uppercase">Uppercase (A-Z)</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="lowercase" checked>
+          <label for="lowercase">Lowercase (a-z)</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="numbers" checked>
+          <label for="numbers">Numbers (0-9)</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="symbols">
+          <label for="symbols">Symbols (!@#$%^&*)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="password-display" id="password-display">
+      Click Generate
+    </div>
+
+    <div class="buttons">
+      <button class="generate-btn" id="generate">Generate Password</button>
+      <button class="copy-btn" id="copy">Copy</button>
+    </div>
+
+    <div class="strength">
+      <div class="strength-meter">
+        <div class="strength-dot"></div>
+        <div class="strength-dot"></div>
+        <div class="strength-dot"></div>
+        <div class="strength-dot"></div>
+        <div class="strength-dot"></div>
+      </div>
+      <div class="strength-text" id="strength-text">Strength: None</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
