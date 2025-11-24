@@ -66,7 +66,7 @@ function passwordStrength(password){
 
   const upperType = /[A-Z]/.test(password);
   const lowerType = /[a-z]/.test(password);
-  const numberType = /[1-9]/.test(password);
+  const numberType = /[0-9]/.test(password);
   const symbolsType = /[^A-Za-z0-9]/.test(password);
   
 
@@ -74,7 +74,7 @@ function passwordStrength(password){
   
   if (passwordLength >= 16 && typesCount === 4){
     strengthenCore = 5;
-    strengthTextEl.textContent = "Very Strong"
+    strengthTextEl.textContent = "Very Strong";
   }else if (passwordLength >= 12 && typesCount >= 3) {
     strengthenCore = 4;
     strengthTextEl.textContent = "Strong";
