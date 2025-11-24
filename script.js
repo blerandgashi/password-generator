@@ -101,7 +101,7 @@ copyBtn.addEventListener("click", function(){
   }
   navigator.clipboard.writeText(generatePassword)
     .then(() => {
-      copyBtn.textContent = "Copy"
+      copyBtn.textContent = "Copied"
     })
     .catch(() => {
       alert("Failed to copy")
