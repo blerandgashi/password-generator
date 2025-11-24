@@ -70,7 +70,12 @@ function passwordStrength(password){
   const symbolsType = /[^A-Za-z0-9]/.test(password);
   
 
-  const typesCount = upperType + lowerType + numberType + symbolsType;
+  let typesCount = 0;
+
+  if (upperType) typesCount++;
+  if (lowerType) typesCount++;
+  if (numberType) typesCount++;
+  if (symbolsType) typesCount++;
   
   if (passwordLength >= 16 && typesCount === 4){
     strengthenCore = 5;
