@@ -42,8 +42,18 @@ lengthValue.addEventListener("input", function(){
   passwordLength.textContent = lengthValue.value;
 })
 
-// 1. generate password button
-// 2. use for loop depending on the password length
-// 3. use math random to get random numbers
-// 4. add them to the password variable
-// 5. show the generated password to "click generate"
+let generatePassword = "";
+generateBtn.addEventListener("click", function(){
+  generatePassword = ""
+
+  for(let i = 0; i < lengthValue.value; i++){
+    let randomNumber = Math.floor(Math.random() * passwordPool.length);
+    generatePassword += passwordPool.charAt(randomNumber);
+  }
+  passwordDisplay.textContent = generatePassword;
+
+})
+
+function passwordStrength(){
+
+}
